@@ -82,7 +82,7 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "LOGIN ID";
+            this.idDataGridViewTextBoxColumn.HeaderText = "LOGOUT ID";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -168,11 +168,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(506, 338);
+            this.label1.Location = new System.Drawing.Point(494, 338);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "LOGIN ID:";
+            this.label1.Text = "LOGOUT ID:";
             // 
             // textBox1
             // 
@@ -251,9 +251,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource attendanceTBLLBindingSource;
-        private DataSet1 dataSet1;
-        private DataSet1TableAdapters.AttendanceTBLLTableAdapter attendanceTBLLTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mnDataGridViewTextBoxColumn;
@@ -263,5 +260,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn courDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource attendanceTBLLBindingSource;
+        private DataSet1 dataSet1;
+        private DataSet1TableAdapters.AttendanceTBLLTableAdapter attendanceTBLLTableAdapter;
     }
 }

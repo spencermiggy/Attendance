@@ -14,7 +14,6 @@ using AForge.Video.DirectShow;
 using ZXing;
 using System.IO.Ports;
 using System.Threading;
-
 namespace Attendance
 {
     public partial class Home : UserControl
@@ -26,7 +25,6 @@ namespace Attendance
         }
         FilterInfoCollection infoCollection;
         VideoCaptureDevice videoCaptureDevice;
-
 
         private void Home_Load(object sender, EventArgs e)
         {

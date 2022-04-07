@@ -187,11 +187,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(493, 338);
+            this.label1.Location = new System.Drawing.Point(494, 338);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "LOGOUT ID:";
+            this.label1.Text = "LOGIN ID:";
             // 
             // attendanceTBLTableAdapter
             // 
