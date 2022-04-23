@@ -30,15 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.attendanceTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Attendance.DataSet1();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,6 +39,15 @@
             this.attendanceTBLTableAdapter = new Attendance.DataSet1TableAdapters.AttendanceTBLTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendanceTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -78,69 +78,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(730, 264);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "LOGIN ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fnDataGridViewTextBoxColumn
-            // 
-            this.fnDataGridViewTextBoxColumn.DataPropertyName = "fn";
-            this.fnDataGridViewTextBoxColumn.HeaderText = "FIRSTNAME";
-            this.fnDataGridViewTextBoxColumn.Name = "fnDataGridViewTextBoxColumn";
-            this.fnDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mnDataGridViewTextBoxColumn
-            // 
-            this.mnDataGridViewTextBoxColumn.DataPropertyName = "mn";
-            this.mnDataGridViewTextBoxColumn.HeaderText = "MIDDLENAME";
-            this.mnDataGridViewTextBoxColumn.Name = "mnDataGridViewTextBoxColumn";
-            this.mnDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lnDataGridViewTextBoxColumn
-            // 
-            this.lnDataGridViewTextBoxColumn.DataPropertyName = "ln";
-            this.lnDataGridViewTextBoxColumn.HeaderText = "LASTNAME";
-            this.lnDataGridViewTextBoxColumn.Name = "lnDataGridViewTextBoxColumn";
-            this.lnDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timinDataGridViewTextBoxColumn
-            // 
-            this.timinDataGridViewTextBoxColumn.DataPropertyName = "timin";
-            this.timinDataGridViewTextBoxColumn.HeaderText = "TIME IN";
-            this.timinDataGridViewTextBoxColumn.Name = "timinDataGridViewTextBoxColumn";
-            this.timinDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datinDataGridViewTextBoxColumn
-            // 
-            this.datinDataGridViewTextBoxColumn.DataPropertyName = "datin";
-            this.datinDataGridViewTextBoxColumn.HeaderText = "DATE";
-            this.datinDataGridViewTextBoxColumn.Name = "datinDataGridViewTextBoxColumn";
-            this.datinDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courDataGridViewTextBoxColumn
-            // 
-            this.courDataGridViewTextBoxColumn.DataPropertyName = "cour";
-            this.courDataGridViewTextBoxColumn.HeaderText = "SECTION";
-            this.courDataGridViewTextBoxColumn.Name = "courDataGridViewTextBoxColumn";
-            this.courDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yrDataGridViewTextBoxColumn
-            // 
-            this.yrDataGridViewTextBoxColumn.DataPropertyName = "yr";
-            this.yrDataGridViewTextBoxColumn.HeaderText = "GRADE LEVEL";
-            this.yrDataGridViewTextBoxColumn.Name = "yrDataGridViewTextBoxColumn";
-            this.yrDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sidDataGridViewTextBoxColumn
-            // 
-            this.sidDataGridViewTextBoxColumn.DataPropertyName = "sid";
-            this.sidDataGridViewTextBoxColumn.HeaderText = "SCHOOL ID";
-            this.sidDataGridViewTextBoxColumn.Name = "sidDataGridViewTextBoxColumn";
-            this.sidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // attendanceTBLBindingSource
             // 
@@ -219,6 +156,69 @@
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "LOGIN ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fnDataGridViewTextBoxColumn
+            // 
+            this.fnDataGridViewTextBoxColumn.DataPropertyName = "fn";
+            this.fnDataGridViewTextBoxColumn.HeaderText = "FIRSTNAME";
+            this.fnDataGridViewTextBoxColumn.Name = "fnDataGridViewTextBoxColumn";
+            this.fnDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mnDataGridViewTextBoxColumn
+            // 
+            this.mnDataGridViewTextBoxColumn.DataPropertyName = "mn";
+            this.mnDataGridViewTextBoxColumn.HeaderText = "MIDDLENAME";
+            this.mnDataGridViewTextBoxColumn.Name = "mnDataGridViewTextBoxColumn";
+            this.mnDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lnDataGridViewTextBoxColumn
+            // 
+            this.lnDataGridViewTextBoxColumn.DataPropertyName = "ln";
+            this.lnDataGridViewTextBoxColumn.HeaderText = "LASTNAME";
+            this.lnDataGridViewTextBoxColumn.Name = "lnDataGridViewTextBoxColumn";
+            this.lnDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timinDataGridViewTextBoxColumn
+            // 
+            this.timinDataGridViewTextBoxColumn.DataPropertyName = "timin";
+            this.timinDataGridViewTextBoxColumn.HeaderText = "TIME IN";
+            this.timinDataGridViewTextBoxColumn.Name = "timinDataGridViewTextBoxColumn";
+            this.timinDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datinDataGridViewTextBoxColumn
+            // 
+            this.datinDataGridViewTextBoxColumn.DataPropertyName = "datin";
+            this.datinDataGridViewTextBoxColumn.HeaderText = "DATE";
+            this.datinDataGridViewTextBoxColumn.Name = "datinDataGridViewTextBoxColumn";
+            this.datinDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courDataGridViewTextBoxColumn
+            // 
+            this.courDataGridViewTextBoxColumn.DataPropertyName = "cour";
+            this.courDataGridViewTextBoxColumn.HeaderText = "COURSE";
+            this.courDataGridViewTextBoxColumn.Name = "courDataGridViewTextBoxColumn";
+            this.courDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yrDataGridViewTextBoxColumn
+            // 
+            this.yrDataGridViewTextBoxColumn.DataPropertyName = "yr";
+            this.yrDataGridViewTextBoxColumn.HeaderText = "YEAR";
+            this.yrDataGridViewTextBoxColumn.Name = "yrDataGridViewTextBoxColumn";
+            this.yrDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sidDataGridViewTextBoxColumn
+            // 
+            this.sidDataGridViewTextBoxColumn.DataPropertyName = "sid";
+            this.sidDataGridViewTextBoxColumn.HeaderText = "SCHOOL ID";
+            this.sidDataGridViewTextBoxColumn.Name = "sidDataGridViewTextBoxColumn";
+            this.sidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // TimeIns
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,6 +249,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource attendanceTBLBindingSource;
+        private DataSet1 dataSet1;
+        private DataSet1TableAdapters.AttendanceTBLTableAdapter attendanceTBLTableAdapter;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mnDataGridViewTextBoxColumn;
@@ -258,10 +263,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn courDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource attendanceTBLBindingSource;
-        private DataSet1 dataSet1;
-        private DataSet1TableAdapters.AttendanceTBLTableAdapter attendanceTBLTableAdapter;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }

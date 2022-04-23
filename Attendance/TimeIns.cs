@@ -33,10 +33,6 @@ namespace Attendance
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (sqlconn.State == ConnectionState.Open)
-            {
-                sqlconn.Close();
-            }
             sqlconn.Open();
             SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM AttendanceTBL", sqlconn);
             DataTable dtbl = new DataTable();
@@ -64,6 +60,13 @@ namespace Attendance
                     textBox1.Text = "";
 
                     MessageBox.Show("Successfully Deleted!");
+                    sqlconn.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM AttendanceTBL", sqlconn);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+
+                    dataGridView1.DataSource = dtbl;
+                    sqlconn.Close();
                 }
                 
             }
