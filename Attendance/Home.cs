@@ -67,7 +67,7 @@ namespace Attendance
 
                 MessageBox.Show("Successfully Saved!");
                 sqlconn.Close();
-                try
+                /*try
                 {
                     SerialPort serialPort = new SerialPort();
                     serialPort.PortName = textBox8.Text;
@@ -99,7 +99,7 @@ namespace Attendance
                 {
                     MessageBox.Show("NO GSM DETECTED", "MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
+                */
             }
             sqlconn.Close();
         }
@@ -217,7 +217,7 @@ namespace Attendance
 
                 MessageBox.Show("Successfully Saved!");
                 sqlconn.Close();
-                try
+                /*try
                 {
                     SerialPort serialPort = new SerialPort();
                     serialPort.PortName = textBox8.Text;
@@ -249,6 +249,7 @@ namespace Attendance
                 {
                     MessageBox.Show("NO GSM DETECTED", "MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                */
             }
             sqlconn.Close();
         }

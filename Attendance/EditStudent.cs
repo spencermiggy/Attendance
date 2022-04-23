@@ -34,7 +34,7 @@ namespace Attendance
                 textBox3.Text = reader["Lastname"].ToString();
                 textBox4.Text = reader["Course"].ToString();
                 textBox5.Text = reader["Years"].ToString();
-                textBox6.Text = reader["Birthdate"].ToString();
+                dateTimePicker1.Text = reader["Birthdate"].ToString();
                 textBox7.Text = reader["Addr"].ToString();
                 textBox8.Text = reader["SchoolID"].ToString();
                 textBox10.Text = reader["ParentNum"].ToString();
@@ -71,7 +71,7 @@ namespace Attendance
                 cmd.Parameters.AddWithValue("@LASTNAME", textBox3.Text);
                 cmd.Parameters.AddWithValue("@COURSE", textBox4.Text);
                 cmd.Parameters.AddWithValue("@YEARS", textBox5.Text);
-                cmd.Parameters.AddWithValue("@BIRTHDATE", textBox6.Text);
+                cmd.Parameters.AddWithValue("@BIRTHDATE", dateTimePicker1.Text);
                 cmd.Parameters.AddWithValue("@ADDR", textBox7.Text);
                 cmd.Parameters.AddWithValue("@SCHOOLID", textBox8.Text);
                 cmd.Parameters.AddWithValue("@PICS", picdata.Value);
@@ -83,7 +83,6 @@ namespace Attendance
                 textBox3.Text = "";
                 textBox4.Text = "";
                 textBox5.Text = "";
-                textBox6.Text = "";
                 textBox7.Text = "";
                 textBox8.Text = "";
                 textBox9.Text = "";

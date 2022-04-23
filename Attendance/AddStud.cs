@@ -42,7 +42,7 @@ namespace Attendance
                 sqlcommand.Parameters.AddWithValue("@LN", textBox3.Text);
                 sqlcommand.Parameters.AddWithValue("@CO", textBox4.Text);
                 sqlcommand.Parameters.AddWithValue("@YR", textBox5.Text);
-                sqlcommand.Parameters.AddWithValue("@BD", textBox6.Text);
+                sqlcommand.Parameters.AddWithValue("@BD", dateTimePicker1.Text);
                 sqlcommand.Parameters.AddWithValue("@AD", textBox7.Text);
                 sqlcommand.Parameters.AddWithValue("@SID", textBox8.Text);
                 sqlcommand.Parameters.AddWithValue("@PICPATH", textBox9.Text);
@@ -59,7 +59,6 @@ namespace Attendance
                     textBox3.Text = "";
                     textBox4.Text = "";
                     textBox5.Text = "";
-                    textBox6.Text = "";
                     textBox7.Text = "";
                     textBox8.Text = "";
                     textBox9.Text = "";

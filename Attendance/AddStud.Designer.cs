@@ -35,7 +35,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new Attendance.PictureClass();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,13 +95,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(177, 20);
             this.textBox7.TabIndex = 6;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(155, 206);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(177, 20);
-            this.textBox6.TabIndex = 5;
             // 
             // textBox5
             // 
@@ -218,11 +211,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(84, 306);
+            this.label9.Location = new System.Drawing.Point(70, 309);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 26);
+            this.label9.Size = new System.Drawing.Size(81, 13);
             this.label9.TabIndex = 21;
-            this.label9.Text = "Parent\'s \r\nMobile #:";
+            this.label9.Text = "Phone Number:";
             // 
             // textBox10
             // 
@@ -254,11 +247,19 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(155, 204);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(185, 20);
+            this.dateTimePicker1.TabIndex = 23;
+            // 
             // AddStud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox10);
@@ -275,7 +276,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -297,7 +297,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -313,5 +312,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox10;
         private PictureClass pictureBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
