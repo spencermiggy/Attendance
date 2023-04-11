@@ -51,46 +51,59 @@ namespace Attendance
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                string imgpath = textBox9.Text;
-                FileStream fs;
-                fs = new FileStream(@imgpath, FileMode.Open, FileAccess.Read);
-                byte[] picbyte = new byte[fs.Length];
-                fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
-                SqlParameter picdata = new SqlParameter();
-                picdata.SqlDbType = SqlDbType.Image;
-                picdata.ParameterName = "PICS";
-                picdata.Value = picbyte;
-                sqlconn.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE Students SET Firstname=@FIRSTNAME,Middlename=@MIDDLENAME,Lastname=@LASTNAME,Course=@COURSE,Years=@YEARS,Birthdate=@BIRTHDATE,Addr=@ADDR,SchoolID=@SCHOOLID,Pics=@PICS,ParentNum=@PARENTNUM WHERE SchoolID=@SCHOOLID", sqlconn);
-                cmd.Parameters.AddWithValue("@FIRSTNAME", textBox1.Text);
-                cmd.Parameters.AddWithValue("@MIDDLENAME", textBox2.Text);
-                cmd.Parameters.AddWithValue("@LASTNAME", textBox3.Text);
-                cmd.Parameters.AddWithValue("@COURSE", textBox4.Text);
-                cmd.Parameters.AddWithValue("@YEARS", textBox5.Text);
-                cmd.Parameters.AddWithValue("@BIRTHDATE", dateTimePicker1.Text);
-                cmd.Parameters.AddWithValue("@ADDR", textBox7.Text);
-                cmd.Parameters.AddWithValue("@SCHOOLID", textBox8.Text);
-                cmd.Parameters.AddWithValue("@PICS", picdata.Value);
-                cmd.Parameters.AddWithValue("@PARENTNUM", textBox10.Text);
-                cmd.ExecuteNonQuery();
+                if (Convert.ToInt32(textBox5.Text) <= 4)
+                {
+                    string imgpath = textBox9.Text;
+                    FileStream fs;
+                    fs = new FileStream(@imgpath, FileMode.Open, FileAccess.Read);
+                    byte[] picbyte = new byte[fs.Length];
+                    fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
+                    fs.Close();
+                    SqlParameter picdata = new SqlParameter();
+                    picdata.SqlDbType = SqlDbType.Image;
+                    picdata.ParameterName = "PICS";
+                    picdata.Value = picbyte;
+                    sqlconn.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE Students SET Firstname=@FIRSTNAME,Middlename=@MIDDLENAME,Lastname=@LASTNAME,Course=@COURSE,Years=@YEARS,Birthdate=@BIRTHDATE,Addr=@ADDR,SchoolID=@SCHOOLID,Pics=@PICS,ParentNum=@PARENTNUM WHERE SchoolID=@SCHOOLID", sqlconn);
+                    cmd.Parameters.AddWithValue("@FIRSTNAME", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@MIDDLENAME", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@LASTNAME", textBox3.Text);
+                    cmd.Parameters.AddWithValue("@COURSE", textBox4.Text);
+                    cmd.Parameters.AddWithValue("@YEARS", textBox5.Text);
+                    cmd.Parameters.AddWithValue("@BIRTHDATE", dateTimePicker1.Text);
+                    cmd.Parameters.AddWithValue("@ADDR", textBox7.Text);
+                    cmd.Parameters.AddWithValue("@SCHOOLID", textBox8.Text);
+                    cmd.Parameters.AddWithValue("@PICS", picdata.Value);
+                    cmd.Parameters.AddWithValue("@PARENTNUM", textBox10.Text);
+                    cmd.ExecuteNonQuery();
 
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-                textBox7.Text = "";
-                textBox8.Text = "";
-                textBox9.Text = "";
-                textBox10.Text = "";
-                pictureBox1.Image = null;
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                    textBox9.Text = "";
+                    textBox10.Text = "";
+                    pictureBox1.Image = null;
 
-                MessageBox.Show("Successfully Updated!");
-                sqlconn.Close();
+                    MessageBox.Show("Successfully Updated!");
+                    sqlconn.Close();
+                }
+                else if (textBox1.Text == string.Empty || textBox2.Text == string.Empty || textBox3.Text == string.Empty ||
+                    textBox4.Text == string.Empty || textBox5.Text == string.Empty || textBox8.Text == string.Empty ||
+                    textBox7.Text == string.Empty || textBox9.Text == string.Empty || textBox10.Text == string.Empty)
+                {
+                    MessageBox.Show("Please Fill All Fields");
+                }
+                else
+                {
+                    MessageBox.Show("Year Level Exceeds!");
+                }
             }
             catch (Exception)
             {

@@ -44,21 +44,24 @@ namespace Attendance
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == string.Empty)
+            if (textBox1.Texts == string.Empty)
             {
-                MessageBox.Show("Please Search Student ID!");
+                MessageBox.Show("Please Input School ID!");
+            }
+            else if(dataGridView1.Rows.Count == 1)
+            {
+                sqlconn.Open();
+                SqlCommand cmd = new SqlCommand("DELETE FROM Students WHERE SchoolID=@SCHOOLID", sqlconn);
+                cmd.Parameters.AddWithValue("@SCHOOLID", (textBox1.Texts));
+                cmd.ExecuteNonQuery();
+                sqlconn.Close();
+                textBox1.Texts = string.Empty;
+
+                MessageBox.Show("Successfully Deleted!");
             }
             else
             {
-                
-                sqlconn.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM Students WHERE SchoolID=@SCHOOLID", sqlconn);
-                cmd.Parameters.AddWithValue("@SCHOOLID", (textBox1.Text));
-                cmd.ExecuteNonQuery();
-                sqlconn.Close();
-                textBox1.Text = "";
-
-                MessageBox.Show("Successfully Deleted!");
+                MessageBox.Show("Student Not Found!");
             }
             
         }
@@ -88,6 +91,47 @@ namespace Attendance
                         + textBox2.Text + "' or Addr= '"
                         + textBox2.Text + "' or ParentNum= '"
                         + textBox2.Text + "'", sqlconn);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+
+                    dataGridView1.DataSource = dtbl;
+                    sqlconn.Close();
+                }
+            }
+            catch (Exception)
+            {
+                if (sqlconn.State == ConnectionState.Open)
+                {
+                    sqlconn.Close();
+                }
+                sqlconn.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Students", sqlconn);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                dataGridView1.DataSource = dtbl;
+                sqlconn.Close();
+            }
+        }
+
+        private void textBox1__TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox1.Texts == string.Empty)
+                {
+                    sqlconn.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Students", sqlconn);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+
+                    dataGridView1.DataSource = dtbl;
+                    sqlconn.Close();
+                }
+                else
+                {
+                    sqlconn.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Students WHERE SchoolID= '" + textBox1.Texts + "'", sqlconn);
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
 

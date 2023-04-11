@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\DONGSPENS\Desktop\Attendance\</PublishUrl>
+    <PublishUrl>E:\MY Created Apps\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -151,6 +151,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="TimeIns.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,6 +203,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TimeIns.resx">
       <DependentUpon>TimeIns.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,7 +241,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AttendanceRecorder.csproj.user" />
+    <Content Include="myDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="myDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>myDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Hopstarter-Soft-Scraps-Book.ico" />
+    <None Include="Resources\BG1.gif" />
+    <None Include="Resources\BG.gif" />
+    <None Include="Resources\mylogo.jpg" />
+    <None Include="Resources\282279808_2681839658614386_8589368001199056266_n.jpg" />
+    <None Include="Resources\switch_on_48px.png" />
+    <None Include="Resources\switch_on_24px.png" />
+    <None Include="Resources\outbox_tray_48px.png" />
+    <None Include="Resources\wastebasket_50px.png" />
+    <None Include="Resources\counterclockwise_arrows_50px.png" />
+    <None Include="Resources\locked_with_key_50px.png" />
+    <None Include="Resources\unlocked_50px.png" />
+    <None Include="Resources\ledger_emoji_50px.png" />
+    <None Include="Resources\school_50px.png" />
+    <None Include="Resources\memo_50px.png" />
+    <None Include="Resources\backpack_50px.png" />
+    <None Include="Resources\woman_teacher_50px.png" />
+    <None Include="Resources\bust_in_silhouette_50px.png" />
+    <None Include="Resources\neutral_person_light_skin_tone_50px.png" />
+    <None Include="Resources\download-removebg-preview.png" />
     <None Include="Resources\camera_100px.png" />
     <None Include="Resources\user_100px.png" />
   </ItemGroup>

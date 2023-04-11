@@ -15,27 +15,27 @@ namespace Attendance
         public Form2()
         {
             InitializeComponent();
-            home1.BringToFront();
+            home2.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            home1.BringToFront();
+            home2.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listStud1.BringToFront();
+            listStud2.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            addStud1.BringToFront();
+            addStud2.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            editAdminAcc1.BringToFront();
+            editAdminAcc2.BringToFront();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -47,12 +47,12 @@ namespace Attendance
 
         private void button6_Click(object sender, EventArgs e)
         {
-            editStudent1.BringToFront();
+            editStudent2.BringToFront();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            timeIns1.BringToFront();
+            timeIns2.BringToFront();
         }
 
         private void button8_Click(object sender, EventArgs e)

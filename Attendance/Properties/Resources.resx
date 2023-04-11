@@ -118,10 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bust_in_silhouette_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bust_in_silhouette_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outbox_tray_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outbox_tray_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="neutral_person_light_skin_tone_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\neutral_person_light_skin_tone_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="counterclockwise_arrows_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\counterclockwise_arrows_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mylogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mylogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="282279808_2681839658614386_8589368001199056266_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\282279808_2681839658614386_8589368001199056266_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unlocked_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlocked_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="switch_on_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\switch_on_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="locked_with_key_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\locked_with_key_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="memo_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\memo_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wastebasket_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wastebasket_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="switch_on_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\switch_on_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ledger_emoji_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ledger_emoji_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="camera_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\camera_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="school_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\school_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backpack_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backpack_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woman_teacher_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woman_teacher_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

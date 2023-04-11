@@ -28,6 +28,7 @@ namespace Attendance
 
         private void Home_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             infoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo info in infoCollection)
                 comboBox1.Items.Add(info.Name);
@@ -67,7 +68,7 @@ namespace Attendance
 
                 MessageBox.Show("Successfully Saved!");
                 sqlconn.Close();
-                /*try
+                try
                 {
                     SerialPort serialPort = new SerialPort();
                     serialPort.PortName = textBox8.Text;
@@ -80,7 +81,7 @@ namespace Attendance
                     Thread.Sleep(100);
                     serialPort.WriteLine("AT+CMGS=\"" + label11.Text + "\"" + Environment.NewLine);
                     Thread.Sleep(100);
-                    serialPort.WriteLine("YOUR CHILD ENTER THE SCHOOL AT '" + label7.Text + "' DATE:'" + label8.Text + "'" + Environment.NewLine);
+                    serialPort.WriteLine("TIME IN: " + label7.Text + " DATE: " + label8.Text + " Full Name: " + label13.Text + "," + label14.Text + " " + label15.Text + ";" + Environment.NewLine);
                     Thread.Sleep(100);
                     serialPort.Write(new byte[] { 26 }, 0, 1);
                     Thread.Sleep(100);
@@ -99,9 +100,12 @@ namespace Attendance
                 {
                     MessageBox.Show("NO GSM DETECTED", "MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                */
             }
             sqlconn.Close();
+            videoCaptureDevice = new VideoCaptureDevice(infoCollection[comboBox1.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+            timer1.Start();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -119,6 +123,10 @@ namespace Attendance
                 textBox4.Text = reader["Course"].ToString();
                 textBox5.Text = reader["Years"].ToString();
                 textBox6.Text = reader["SchoolID"].ToString();
+                label11.Text = reader["ParentNum"].ToString();
+                label13.Text = reader["LastName"].ToString();
+                label14.Text = reader["Firstname"].ToString();
+                label15.Text = reader["Middlename"].ToString();
                 MemoryStream ms = new MemoryStream((byte[])reader["Pics"]);
                 pictureBox2.Image = new Bitmap(ms);
             }
@@ -145,6 +153,8 @@ namespace Attendance
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            label7.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
             if (pictureBox1.Image != null)
             {
                 BarcodeReader barcodeReader = new BarcodeReader();
@@ -163,7 +173,7 @@ namespace Attendance
         {
             SqlConnection sqlconns = new SqlConnection(DBclass.conns);
             sqlconns.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Firstname,Middlename,Lastname,Course,Years,SchoolID,Pics FROM Students WHERE SchoolID=@SID", sqlconns);
+            SqlCommand cmd = new SqlCommand("SELECT Firstname,Middlename,Lastname,Course,Years,SchoolID,Pics,ParentNum FROM Students WHERE SchoolID=@SID", sqlconns);
             cmd.Parameters.AddWithValue("@SID", (textBox7.Text));
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -174,6 +184,10 @@ namespace Attendance
                 textBox4.Text = reader["Course"].ToString();
                 textBox5.Text = reader["Years"].ToString();
                 textBox6.Text = reader["SchoolID"].ToString();
+                label11.Text = reader["ParentNum"].ToString();
+                label13.Text = reader["LastName"].ToString();
+                label14.Text = reader["Firstname"].ToString();
+                label15.Text = reader["Middlename"].ToString();
                 MemoryStream ms = new MemoryStream((byte[])reader["Pics"]);
                 pictureBox2.Image = new Bitmap(ms);
             }
@@ -217,7 +231,7 @@ namespace Attendance
 
                 MessageBox.Show("Successfully Saved!");
                 sqlconn.Close();
-                /*try
+                try
                 {
                     SerialPort serialPort = new SerialPort();
                     serialPort.PortName = textBox8.Text;
@@ -230,7 +244,7 @@ namespace Attendance
                     Thread.Sleep(100);
                     serialPort.WriteLine("AT+CMGS=\"" + label11.Text + "\"" + Environment.NewLine);
                     Thread.Sleep(100);
-                    serialPort.WriteLine("YOUR CHILD EXITS THE SCHOOL AT '" + label7.Text + "' DATE:'" + label8.Text + "'" + Environment.NewLine);
+                    serialPort.WriteLine("TIME OUT: " + label7.Text + " DATE: " + label8.Text + " Full Name: " + label13.Text + "," + label14.Text + " " + label15.Text + ";" + Environment.NewLine);
                     Thread.Sleep(100);
                     serialPort.Write(new byte[] { 26 }, 0, 1);
                     Thread.Sleep(100);
@@ -249,9 +263,12 @@ namespace Attendance
                 {
                     MessageBox.Show("NO GSM DETECTED", "MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                */
             }
             sqlconn.Close();
+            videoCaptureDevice = new VideoCaptureDevice(infoCollection[comboBox1.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+            timer1.Start();
         }
     }
 }
